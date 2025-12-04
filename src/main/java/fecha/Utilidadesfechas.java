@@ -1,12 +1,10 @@
 package fecha;
 
-import java.util.Scanner;
 import java.time.LocalDate;
+import java.time.MonthDay;
 
 public class Utilidadesfechas {
     // Esta clase va a tenr todos los métodos.
-
-    private Scanner tec = new Scanner(System.in);
 
     // este método "isLeapYear" directamente es una función que nos compruea si el
     // año que hemos solicitado es bisiesto o no
@@ -31,22 +29,30 @@ public class Utilidadesfechas {
     // diasMes(LocalDate fecha): devolverá el número de días que tiene el mes para
     // la fecha.
     public static LocalDate diasMes(LocalDate fecha) {
+        LocalDate diasMes = LocalDate.of(1, 12, 1976);
+        MonthDay diaMes = MonthDay.of(diasMes.getMonth(), diasMes.getDayOfMonth());
+        MonthDay diaMeshoy = MonthDay.from(LocalDate.now());
+
+        if (diaMes.equals(diaMeshoy)) {
+            System.out.println("Hoy es tu puto día. Coño espabila");
+        }
         return diasMes(fecha);
     }
 
     // Método 4.
     // diaSemana(LocalDate fecha): devolverá el día de la semana de la fecha (0 para
     // domingo, ..., 6 para sábado)
-    public static LocalDate diaSemana(LocalDate fecha){
+    public static LocalDate diaSemana(LocalDate fecha) {
         return diaSemana(fecha);
     }
 
+    // Método 5.
+    // mostrarFechaLarga(LocalDate fecha): mostrará la fecha en formato largo,
+    // empezando por el día de la semana (ejemplo: martes 2 de septiembre de 2003).
     // Formato fecha larga
-    /*
-     * DAteTimeFormatter formato = DateTimeFormatter.ofPattern("dd MM yyyy");
-     * String fechaString = hoy.format(formato);
-     * Sout("Fecha sin formato " + hoy);
-     * sout("Fecha con formato " + fechaString);
-     * 
-     */
-}
+    public static LocalDate diaformatolargo (LocalDate fecha){
+        DAteTimeFormatter formato = DateTimeFormatter.ofPattern("dd MM yyyy");
+    String fechaString = hoy.format(formato);
+    System.out.println("Fecha sin formato " + hoy);
+    sout("Fecha con formato " + fechaString);
+    }
