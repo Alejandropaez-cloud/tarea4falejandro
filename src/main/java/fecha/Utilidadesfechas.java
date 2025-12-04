@@ -115,9 +115,10 @@ public class Utilidadesfechas {
     // sumarSegundos(long numeroSegundos, LocalDateTime fecha): devolverá un nuevo
     // objeto LocalDateTime después de haber sumado los segundos que se pasan como
     // parámetro.
-    public static LocalDateTime sumarSegundos (long numeroSegundos, LocalDateTime fechaPropuesta) {
+    public static LocalDateTime sumarSegundos(long numeroSegundos, LocalDateTime fechaPropuesta) {
         LocalDateTime segundossumados = fechaPropuesta.plus(numeroSegundos, ChronoUnit.SECONDS);
-        System.out.println("Si a la fecha " + fechaPropuesta + " le sumamos " + numeroSegundos + " segundos, la nueva fecha será " + segundossumados);
+        System.out.println("Si a la fecha " + fechaPropuesta + " le sumamos " + numeroSegundos
+                + " segundos, la nueva fecha será " + segundossumados);
         return segundossumados;
     }
 }
