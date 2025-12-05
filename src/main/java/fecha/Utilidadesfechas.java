@@ -25,7 +25,7 @@ public class Utilidadesfechas {
     // copia(LocalDate fecha): devolverá un nuevo objeto LocalDate haciendo una
     // copia de fecha.
     public static LocalDate copia(LocalDate fechaPropuesta) {
-        LocalDate copia1 = LocalDate.of(fechaPropuesta.getYear(), fechaPropuesta.getMonth(), fecha.getDayOfMonth());
+        LocalDate copia1 = LocalDate.of(fechaPropuesta.getYear(), fechaPropuesta.getMonth(), fechaPropuesta.getDayOfMonth());
         return copia1;
     }
 
@@ -106,7 +106,7 @@ public class Utilidadesfechas {
     // entre los dos objetos, fecha1 y fecha2.
     public static long minutos (LocalDateTime PrimeraFecha, LocalDateTime SegundaFecha) {
         Long minutos = ChronoUnit.MINUTES.between(PrimeraFecha, SegundaFecha);
-        System.out.println("Los minutos que han transcurrido desde " + PrimeraFecha + " hasta " + SegundaFecha " son " + minutos + " minutos ");
+        System.out.println("Los minutos que han transcurrido desde " + PrimeraFecha + " hasta " + SegundaFecha + " son " + minutos + " minutos ");
         return minutos;
 
     }
